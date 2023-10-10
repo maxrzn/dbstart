@@ -1,16 +1,24 @@
-## Prerequisites
+## Useful ressources for lecture Integration Architectures
+(Prof. Dr. Sascha Alda)
+
+In this readme, you find various useful links especially for working with MongoDB together with the programming language Java. These will be useful especially for the exercise sheets no. 1 and 2.
+
+
+### Prerequisites
 
  Access to a **MongoDB** server is necessary. If you don't have one already, you should download the community server at:
+ https://www.mongodb.com/try/download/community
+
+or (even better) here:
+
+https://www.mongodb.com/docs/manual/administration/install-community/
+
+Community Version 4.2 and 7.0 (latest release) work fine with our examples.
  
- https://www.mongodb.com/try/download/community.
+ ### Further nice links for supporting MongoDB
  
- ## Further nice links for supporting MongoDB
- 
- A fully comprehensive MongoDB Tutorial (based on MongoDB 3.4) for Java:<br />
- https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/
- 
- Installation guide for MongoDB:<br />
- https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/installation/
+ A fully comprehensive MongoDB Tutorial for Java:<br />
+ https://www.mongodb.com/docs/drivers/java/sync/current/quick-start/
  
  A nice tutorial for MongoDB with a nice introduction and installation guidelines:<br />
  https://www.baeldung.com/java-mongodb
@@ -37,6 +45,24 @@
  https://www.baeldung.com/spring-shell-cli <br />
  
 
-## Support
+### Support
 In some versions, the Java compiler from a fresh Maven project is set version 1.5, which will make the new version obsolete. You have to adjust the compiler level:<br />
 https://stackoverflow.com/questions/30690295/removing-warning-messages-on-intellij-idea-while-building-java-project
+
+### IDE
+We recommend installing and using the IDE IntelliJ. As a member of the University you can register yourself easily in order to obtain the Ultimate-Version, which is a fully equipped version with the latest features. The necessary key expires after one year, but can easily be refreshed afterwards. <br>
+https://www.jetbrains.com/idea/
+
+### Resources for UML tools:
+
+UMLet 14.3
+A good and well-aranged desktop tool for modelling UML. Installations can be found for Windows / MAC / Linux. The usability is a bit tricky in the beginning, but somewhat effective a short while ;-)
+http://www.umlet.com/
+
+Draw.io
+A lean and browser-based tool, thus, no installation of a local machine is necessary. Documents can be stored in various formats.
+https://app.diagrams.net/
+
+Mermaid:
+Mermaid is a DSL-based Editor, that supports various diagram types. It can also be integrated within a markdown document, see [here](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)
+https://mermaid.live
