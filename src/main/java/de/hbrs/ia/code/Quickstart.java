@@ -22,10 +22,10 @@ public class Quickstart {
         String uri = "mongodb+srv://mziege2s:Max21.11.@cluster0.wqctpff.mongodb.net/?retryWrites=true&w=majority";
 
         try (MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("sample_mflix");
-            MongoCollection<Document> collection = database.getCollection("movies");
+            MongoDatabase database = mongoClient.getDatabase("personal");
+            MongoCollection<Document> collection = database.getCollection("info");
 
-            Document doc = collection.find(eq("title", "Back to the Future")).first();
+            Document doc = collection.find(eq("id", "90125")).first();
             if (doc != null) {
                 System.out.println(doc.toJson());
             } else {
