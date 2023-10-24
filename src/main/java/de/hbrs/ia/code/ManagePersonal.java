@@ -16,7 +16,7 @@ import static com.mongodb.client.model.Filters.eq;
 
 public class ManagePersonal implements ManagePersonalIF {
     @Override
-    public String createSalesMan(SalesMan record) {
+    public void createSalesMan(SalesMan record) {
         String uri = "mongodb+srv://mziege2s:Max21.11.@cluster0.wqctpff.mongodb.net/?retryWrites=true&w=majority";
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("personal");
@@ -27,16 +27,15 @@ public class ManagePersonal implements ManagePersonalIF {
                         .append("firstname", record.getFirstname())
                         .append("lastname", record.getLastname())
                         .append("id", record.getId()));
-                return "Success! Inserted document id: " + result.getInsertedId();
             } catch (MongoException me) {
-                return "Unable to insert due to an error: " + me;
+                System.out.println("Unable to insert due to an error: " + me);
             }
         }
     }
 
-
-    public String readSalesMan(int sid) {
-        String out;
+    @Override
+    public SalesMan readSalesMan(int sid) {
+        SalesMan out = null;
         String uri = "mongodb+srv://mziege2s:Max21.11.@cluster0.wqctpff.mongodb.net/?retryWrites=true&w=majority";
 
         try (MongoClient mongoClient = MongoClients.create(uri)) {
@@ -45,13 +44,10 @@ public class ManagePersonal implements ManagePersonalIF {
 
             Document doc = collection.find(eq("id", sid)).first();
             if (doc != null) {
-                out = doc.toJson();
-            } else {
-                out = "No matching documents found.";
+                out = new SalesMan((String) doc.get("firstname"), (String) doc.get("lastname"), (Integer) doc.get("id"));
             }
+            return out;
         }
-        return out;
     }
-
 }
 

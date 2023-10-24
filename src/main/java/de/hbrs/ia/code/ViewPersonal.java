@@ -34,23 +34,30 @@ public class ViewPersonal {
             JButton createButton = new JButton("create");
             JButton showButton = new JButton("show");
 
+            //create SalesMan
             createButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     int id = Integer.parseInt(idField.getText());
                     String firstname = firstnamefield.getText();
                     String lastname = lastnamefield.getText();
-
-                    outputTextArea.setText(mp.createSalesMan(new SalesMan(firstname,lastname,id)));
-
+                    mp.createSalesMan(new SalesMan(firstname,lastname,id));
+                    outputTextArea.setText("Sucessfull!");
                 }
             });
 
+            //read SalesMan
             showButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     int id = Integer.parseInt(idField.getText());
-                    outputTextArea.setText(mp.readSalesMan(id));
+                    if(mp.readSalesMan(id) != null) {
+                        outputTextArea.setText("Requested Employee: " + mp.readSalesMan(id).getFirstname() +" " +
+                                                                        mp.readSalesMan(id).getLastname() +" , ID: "+
+                                                                        mp.readSalesMan(id).getId());
+                    } else {
+                        outputTextArea.setText("Employee not found!");
+                    }
                 }
             });
 
