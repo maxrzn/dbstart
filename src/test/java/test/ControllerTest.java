@@ -43,7 +43,8 @@ class ControllerTest {
         info.insertOne(document);
 
         // READ (Finding) the stored Documnent
-        Document newDocument = info.find(eq("id", "90133")).first();
+        //Document newDocument = info.find(eq("id", "90133")).first();
+        Document newDocument = this.info.find().first();
         if (newDocument != null) {
             System.out.println(newDocument.toJson());
             // Assertion
