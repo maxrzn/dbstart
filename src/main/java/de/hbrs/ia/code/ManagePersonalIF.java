@@ -13,9 +13,13 @@ public interface ManagePersonalIF {
     //public void addPerformanceReord( EvaluationRecord record , int sid );
 
     public SalesMan readSalesMan(int sid );
-
+    // public void deleteSalesMan(int sid);
+    // public void updateSalesMan(SalesMan s);
     // public List<SalesMan> querySalesMan(String attribute , String key );
-
     // public EvaluationRecord readEvaluationRecords( int sid );
+    // public void deleteEvaluationRecords(int sid);
+    // public EvaluationRecord updateEvaluationRecords(int sid);
+
+
 
 }

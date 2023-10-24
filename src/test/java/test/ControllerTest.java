@@ -53,8 +53,6 @@ class ControllerTest {
         } else {
             System.out.println("No matching documents found.");
         }
-
-
         // Deletion
         info.drop();
     }
