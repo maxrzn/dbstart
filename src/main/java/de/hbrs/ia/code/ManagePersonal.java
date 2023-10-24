@@ -49,5 +49,12 @@ public class ManagePersonal implements ManagePersonalIF {
             return out;
         }
     }
+
+    @Override
+    public EvaluationRecord readEvaluationRecords(int sid) {
+        //TODO
+        return null;
+    }
+
 }
 

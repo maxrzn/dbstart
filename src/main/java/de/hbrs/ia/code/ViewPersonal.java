@@ -33,6 +33,7 @@ public class ViewPersonal {
             // Create a button to perform the action
             JButton createButton = new JButton("create");
             JButton showButton = new JButton("show");
+            JButton showPerformanceButton = new JButton("show performance");
 
             //create SalesMan
             createButton.addActionListener(new ActionListener() {
@@ -61,6 +62,14 @@ public class ViewPersonal {
                 }
             });
 
+            //show Performance record
+            showPerformanceButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    //TODO
+                }
+            });
+
             // Add components to the panel
             panel.add(idLabel);
             panel.add(idField);
@@ -71,6 +80,7 @@ public class ViewPersonal {
             panel.add(createButton);
             panel.add(outputTextArea);
             panel.add(showButton);
+            panel.add(showPerformanceButton);
 
             // Add the panel to the frame
             frame.add(panel);
