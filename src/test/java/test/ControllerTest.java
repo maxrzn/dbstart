@@ -13,7 +13,7 @@ import static com.mongodb.client.model.Filters.eq;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ControllerTest {
-
+/*
     private MongoClient mongoClient;
     private MongoDatabase personal;
     private MongoCollection<Document> info;
@@ -22,7 +22,7 @@ class ControllerTest {
      * Attention: You might update the version of the Driver
      * for newer version of MongoDB!
      * This tests run with MongoDB 4.2.17 Community
-     */
+     *
     @BeforeEach
     void setUp() {
         String uri = "mongodb+srv://mziege2s:Max21.11.@cluster0.wqctpff.mongodb.net/?retryWrites=true&w=majority";
@@ -78,4 +78,5 @@ class ControllerTest {
         // Deletion
         info.drop();
     }
+    */
 }

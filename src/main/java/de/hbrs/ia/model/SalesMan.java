@@ -44,4 +44,7 @@ public class SalesMan {
         document.append("id" , this.id);
         return document;
     }
+    public String toString(){
+        return this.id +", " + this.firstname + " " + this.lastname;
+    }
 }

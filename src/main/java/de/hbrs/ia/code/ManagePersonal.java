@@ -5,12 +5,9 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.result.InsertOneResult;
 import de.hbrs.ia.model.SalesMan;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-
-import java.util.Arrays;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -22,7 +19,7 @@ public class ManagePersonal implements ManagePersonalIF {
             MongoDatabase database = mongoClient.getDatabase("personal");
             MongoCollection<Document> collection = database.getCollection("info");
             try {
-                InsertOneResult result = collection.insertOne(new Document()
+                collection.insertOne(new Document()
                         .append("_id", new ObjectId())
                         .append("firstname", record.getFirstname())
                         .append("lastname", record.getLastname())
@@ -50,11 +47,11 @@ public class ManagePersonal implements ManagePersonalIF {
         }
     }
 
-    @Override
+    /*@Override
     public EvaluationRecord readEvaluationRecords(int sid) {
         //TODO
         return null;
     }
-
+*/
 }
 
